@@ -1,0 +1,229 @@
+/* Paragraphs font */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* Headings font */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  color: var(--main-font-clr);
+  background-color: var(--main-bg-clr);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
+  width: 100%;
+}
+
+:root {
+  --main-font-clr: #202124;
+  --main-bg-clr: #fffff;
+  --light-font-clr: #e8eaed;
+  --dark-bg-clr: #202124;
+  --header-bg-color: #ff5a5a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.language {
+  font-size: 2rem;
+}
+
+header {
+  height: 100vh;
+  background-color: var(--header-bg-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 5%;
+}
+
+header h1 {
+  font-size: 6.2rem;
+  line-height: 1;
+}
+
+header p {
+  max-width: 55rem;
+  margin: 2rem 0;
+}
+
+header a {
+  color: var(--main-font-clr);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background-color: var(--light-font-clr);
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 300ms ease-in-out;
+}
+
+header a:hover {
+  bottom: 0.3rem;
+  cursor: pointer;
+  color: var(--header-bg-color);
+  transform: translate(0, -0.3rem);
+}
+
+.menu-icon {
+  position: relative;
+  z-index: 2;
+}
+
+/* .menu-icon:hover {
+  border: 1px solid var(--header-bg-color);
+  background: none;
+} */
+
+img.menu-open {
+  /* position: absolute; */
+  /* display: block; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--header-bg-color);
+}
+
+img.menu-close {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--header-bg-color);
+}
+
+/* .close-menu {
+  display: none;
+} */
+
+/* img.menu-open:hover,
+img.menu-close:hover {
+  border: 1px solid var(--header-bg-color);
+  background: none;
+} */
+
+.language-heading,
+.topic-heading {
+  color: var(--header-bg-color);
+  text-decoration: none;
+  display: block;
+  /* display: flex; */
+  /* align-content: center; */
+  /* justify-content: space-around; */
+}
+
+#content-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-font-clr);
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 5%;
+  /* padding-top: 2rem; */
+  z-index: 1;
+}
+
+.closeNav {
+  display: none;
+  /* visibility: hidden; */
+}
+
+/* #content-nav:nth-child(1) {
+  margin-top: 2rem;
+} */
+
+.language-heading {
+  color: var(--main-font-clr);
+  font-weight: 700;
+  padding: 0 2rem;
+}
+
+.topic-heading {
+  font-family: "Montserrat", sans-serif;
+  color: var(--main-font-clr);
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.6rem 2rem;
+}
+
+.topic-heading:hover {
+  color: var(--light-font-clr);
+  background-color: var(--header-bg-color);
+  font-weight: 700;
+  transition: all 80ms ease-in-out;
+}
+
+#main-content {
+  padding: 5%;
+}
+
+#main-content h2 {
+  color: var(--header-bg-color);
+  font-size: 3.1rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+  .menu-icon {
+    visibility: hidden;
+  }
+  main {
+    display: flex;
+  }
+  #content-nav {
+    width: 20%;
+    position: sticky;
+    top: 0;
+    overflow-y: scroll;
+    padding: 5% 0;
+  }
+  #main-content {
+    width: 80%;
+  }
+}
